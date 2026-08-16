@@ -1,0 +1,28 @@
+# Carried from V-Sekai-fire/turboquant-project, whose Godot project is now client/.
+# It was the one file the move left behind, and without it the first person to open
+# client/ in the editor commits the import cache, and the first to run inference
+# commits a multi-gigabyte model.
+
+# Godot 4. The extension patterns are not anchored to client/, because Godot writes an
+# .import beside every asset at whatever depth it sits, and client/*.import would match
+# only the top one.
+client/.godot/
+*.translation
+*.import
+
+# Mono
+client/.mono/
+client/data_*/
+mono_crash.*.json
+
+# Models, downloaded at runtime and never committed
+*.gguf
+*.gguf.import
+
+# Playwright MCP session artefacts
+.playwright-mcp/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
