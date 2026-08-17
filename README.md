@@ -2,7 +2,7 @@
 
 The Gyre hexagon: the simulated things and the actions on them. Rooms, NPCs, contracts, items, and the drivers that act on them.
 
-Setting and loop are **RFD 0085**, "The Gyre — a MUD setting on the loot-action core-loop shell". This repository is content and drivers for that setting; it is not a new architecture. The authoritative zone server is `interactor-gyre`, the client stays Godot unchanged, and transport lives on `transport-ingest` and `transport-gateway`.
+Setting and loop are **RFD 0085**, "The Gyre — a MUD setting on the loot-action core-loop shell". This repository is content and drivers for that setting; it is not a new architecture. The authoritative zone server is `interactor-gyre`, the client stays Godot unchanged, and transport lives on `transport-ingest-c` and `transport-gateway-c`.
 
 ## What is here
 
