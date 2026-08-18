@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "entities-gyre: the Gyre hexagon -- Sparks, Frames, the Debt Clock and the Commons"
+abstract: >
+  Entities are the simulated things and the actions on them, and this is the content
+  and the drivers for one setting: rooms, NPCs, contracts, items. Setting and loop
+  are RFD 0085, the Gyre, a MUD on the loot-action core-loop shell. It is not a new
+  architecture -- the authoritative zone server is interactor-gyre, the client stays
+  Godot unchanged, and transport lives on the ingest and gateway edges. The design
+  constraint that decides everything else is that a companion and a player drive a
+  Spark through the same surface, or the companion is a different game.
+authors:
+  - family-names: Lee
+    given-names: "K. S. Ernest (iFire)"
+    email: ernest.lee@chibifire.com
+    orcid: "https://orcid.org/0000-0003-4570-1436"
+version: 0.1.0-dev.1
+date-released: "2026-08-17"
+license: MIT
+repository-code: "https://github.com/v-sekai-multiplayer-fabric/entities-gyre"
+keywords:
+  - game-design
+  - htn-planning
+  - mud
+  - npc-behaviour
+references:
+
+  - type: report
+    title: "RFD 0085: The Gyre -- a MUD setting on the loot-action core-loop shell"
+    authors:
+      - family-names: Lee
+        given-names: "K. S. Ernest (iFire)"
+    notes: >
+      The setting and the loop this repository is content for. It already says NPC
+      companions fill empty party slots when a party is short, which is the whole
+      planner requirement in one line.
+
+  - type: software
+    title: "interactor-taskweft: the planner plane"
+    authors:
+      - family-names: Lee
+        given-names: "K. S. Ernest (iFire)"
+    url: "https://github.com/v-sekai-multiplayer-fabric/interactor-taskweft"
+    notes: >
+      The HTN planner the RECTGTN ladder in docs/planner-ladder.md is written against.
+      A driver here decides what a body should do; that repository decides how.
+
+  - type: software
+    title: "qwen38-mtp: the streaming probe kept as a throughput reference"
+    notes: >
+      sim/probe.py is that probe, unmodified. Kept rather than adapted so the measured
+      MTP decode numbers in docs/mtp-measurements.md stay comparable to the source they
+      came from, with the spec-off floor recorded beside them.
